@@ -621,6 +621,7 @@ def _make_instance_consuming_action(ctx, cue_subcommand, mnemonic, description, 
 
 def _augment_consolidated_output_args(ctx, args):
     args.add("--out", ctx.attr.output_format)
+    args.add("-p", ctx.attr.package_name)
 
 def _add_common_consolidated_output_attrs_to(attrs):
     attrs.update({
