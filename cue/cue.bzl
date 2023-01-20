@@ -556,6 +556,8 @@ if [ -n "${qualifier}" ]; then
   exit 1
 fi
 
+set -x
+
 "${oldwd}/${cue}" "${subcommand}" --outfile "${oldwd}/${output_file}" \
   ${instance_path}${package_name:+:${package_name}} \
   ${packageless_file_args[@]+"${packageless_file_args[@]}"} \
